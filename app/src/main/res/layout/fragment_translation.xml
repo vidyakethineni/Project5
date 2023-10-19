@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- Radio Groups in a Horizontal LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- First Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Source Language Radio Group -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Source Language"
+                android:textSize="16sp"
+                android:paddingBottom="5dp"/>
+
+            <RadioGroup
+                android:id="@+id/sourceLanguageRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/englishRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English" />
+
+                <RadioButton
+                    android:id="@+id/spanishRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spanish" />
+
+                <RadioButton
+                    android:id="@+id/germanRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="German" />
+
+                <RadioButton
+                    android:id="@+id/detectRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detect" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Second Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Translation Radio Group -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Translation"
+                android:textSize="16sp"
+                android:paddingBottom="5dp"/>
+
+            <RadioGroup
+                android:id="@+id/targetLanguageRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/spanishTargetRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spanish" />
+
+                <RadioButton
+                    android:id="@+id/germanTargetRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="German" />
+
+                <RadioButton
+                    android:id="@+id/englishTargetRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Text View for Output Translation -->
+    <TextView
+        android:id="@+id/translationTextView"
+        android:layout_width="390dp"
+        android:layout_height="245dp"
+        android:paddingBottom="5dp"
+        android:hint="Translation"
+        android:textSize="16sp" />
+    <!-- Edit Text for Input Translation -->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Write something..."
+        android:textSize="20sp" />
+</LinearLayout>
+
